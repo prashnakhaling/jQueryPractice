@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Zebra Stripes table effect. also to print page</title>
+    <link rel="stylesheet" href="jquerystyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("tr:odd").addClass("zebra");
+            // to print the page using jQuery
+            $('button.onclick').click(function () {
+                window.print();
+                return false;
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="adminpage">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Subject</th>
+                <th>Professor</th>
+
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>Data Structure and Algorithm</td>
+                <td>Er. Pralhad Adhikari</td>
+
+            </tr>
+            <tr>
+                <td>005</td>
+                <td>Numerical Methods</td>
+                <td>Er. Sunil Karki</td>
+            </tr>
+            <tr>
+                <td>008</td>
+                <td>Advance Java</td>
+                <td>Er. Ayushi Jha</td>
+            </tr>
+         
+        </table>
+        <button class="onclick">Print</button>
+    </div>
+</body>
+
+</html>
