@@ -10,6 +10,23 @@ th {
 .zebra {
     background-color: lavender;
 }
-p span{
+
+p span {
     text-decoration: underline;
-  }
+}
+
+.aboutp {
+    color:rgb(128, 0, 128);
+    font-family:sans-serif;
+    text-align: center;
+}
+h2{
+    color:rgb(16, 16, 248);
+    text-align: center;
+}
+/* css for button */
+.remove{
+ margin :auto;
+ display:flex;
+ justify-content: center;
+}
