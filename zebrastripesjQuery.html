@@ -30,6 +30,21 @@
             console.log('No of Rows:' + rowctr);
             console.log('No of Columns:' + colctr);
 
+            //delete all table rows except first one using jQuery
+            $("#delete").click(function () {
+                $("#table1").find("tr:gt(0)").remove();
+            });
+
+            //remove a specific table row jQuery
+            $("#deleterow").click(function () {
+                $("#row2").remove();
+            });
+
+            //set value in input text using jQuery
+            $("#formbtn").click(function () {
+                $('input[name="fname"]').val('MEELA');
+            });
+
         });
     </script>
 </head>
@@ -37,24 +52,24 @@
 <body>
     <div class="adminpage">
         <table id="table1">
-            <tr>
+            <tr id="row1">
                 <th>ID</th>
                 <th>Subject</th>
                 <th>Professor</th>
 
             </tr>
-            <tr>
+            <tr id="row2">
                 <td>002</td>
                 <td>Data Structure and Algorithm</td>
                 <td>Er. Pralhad Adhikari</td>
 
             </tr>
-            <tr>
+            <tr id="row3">
                 <td>005</td>
                 <td>Numerical Methods</td>
                 <td>Er. Sunil Karki</td>
             </tr>
-            <tr>
+            <tr id="row4">
                 <td>008</td>
                 <td>Advance Java</td>
                 <td>Er. Ayushi Jha</td>
@@ -64,6 +79,15 @@
         <br>
         <!-- when you click in the print the print option will arrive -->
         <button class="onclick">Print</button>
+        <input type="button" id="delete" value="click to remove rows" />
+        <!-- remove a specific table row using jQuery -->
+        <input type="button" id="deleterow" value="click to remove second row:"><br>
+        <br>
+
+        <!-- set value in input text using jQuery -->
+        <label for="name">Enter Your name:</label>
+        <input type="text" name="fname">
+        <input type="button" id="formbtn" value="click to set the default name">
 </body>
 
 </html>

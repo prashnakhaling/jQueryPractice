@@ -12,6 +12,10 @@
                 .empty()
                 .append('<option selected="selected" value="test">Information Technology</option>');
         }
+        $(document).ready(function () {
+            var count = $("#countcountry p").length
+            console.log(count);
+        });
     </script>
 </head>
 
@@ -25,6 +29,15 @@
         <option value="BBA">BBA</option>
     </select>
     <input type="button" value="click to remove all options" onclick="removeoption()" />
+    <!-- count child elements using jQuery -->
+    <div id="countcountry">
+        <p>Nepal</p>
+        <p>Bangadesh</p>
+        <p>Bhutan</p>
+        <p>India</p>
+        <p>China</p>
+        <p>Boudha</p>
+    </div>
 </body>
 
 </html>

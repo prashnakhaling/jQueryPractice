@@ -15,12 +15,18 @@
             $("#heading").css("color", "black"); // using jQuery function to change color of heading to black from purple.
         }
 
+        //adding a CSS class using jQuery
+        $('#addcss').click(function () {
+            $('#heading1').addClass('aboutp');
+        });
+
     </script>
 
 </head>
 
 <body>
     <h2 id="heading">This is a test.</h2>
+   
     <input type="button" class="remove" value="remove style" onclick="removecss_style()" />
     <p id="test" class="aboutp">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum sapiente cumque, amet
         reprehenderit
@@ -28,7 +34,8 @@
         animi minus, recusandae iusto consequuntur ipsam.</p>
     <input type="button" class="remove" value="click to remove all classes" onclick="removecss_class()" />
 
-
+    <h1 id="heading1">This is a test.</h1>
+    <input type="button" value="Add CSS" id="addcss"/><br>
 </body>
 
 </html>
